@@ -6,20 +6,37 @@ package com.mycompany.taller1.biblioteca.git;
 
 
 public class Persona {
+    private int id;
     private String nombre;
-    private String cedula;
+    private String telefono;
 
     public Persona(String nombre, String cedula) {
+        this.id = id;
         this.nombre = nombre;
-        this.cedula = cedula;
+        this.telefono = telefono;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public String getCedula() {
-        return cedula;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
-    
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
 }

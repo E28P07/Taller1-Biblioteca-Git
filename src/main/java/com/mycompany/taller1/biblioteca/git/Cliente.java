@@ -5,20 +5,18 @@
 package com.mycompany.taller1.biblioteca.git;
 
 public class Cliente extends Persona {
-    private String direccion;
-    private String telefono;
+    private String email;
 
-    public Cliente(String nombre, String cedula, String direccion, String telefono) {
-        super(nombre, cedula);
-        this.direccion = direccion;
-        this.telefono = telefono;
+    public Cliente(String id, String nombre, String telefono, String email) {
+        super(id, nombre, telefono);
+        this.email = email;
+    }
+    
+    public String getEmail() {
+        return email;
     }
 
-    public String getDireccion() {
-        return direccion;
-    }
-
-    public String getTelefono() {
-        return telefono;
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
