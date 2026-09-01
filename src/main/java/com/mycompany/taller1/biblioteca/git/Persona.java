@@ -10,7 +10,7 @@ public class Persona {
     private String nombre;
     private String telefono;
 
-    public Persona(String nombre, String cedula) {
+    public Persona(int id, String nombre, String cedula) {
         this.id = id;
         this.nombre = nombre;
         this.telefono = telefono;

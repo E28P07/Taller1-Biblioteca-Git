@@ -7,7 +7,7 @@ package com.mycompany.taller1.biblioteca.git;
 public class Cliente extends Persona {
     private String email;
 
-    public Cliente(String id, String nombre, String telefono, String email) {
+    public Cliente(int id, String nombre, String telefono, String email) {
         super(id, nombre, telefono);
         this.email = email;
     }
