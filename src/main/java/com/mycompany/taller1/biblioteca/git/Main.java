@@ -14,11 +14,11 @@ public class Main {
         int opcion;
 
         do {
-            System.out.println("\n=== Menú Principal ===");
-            System.out.println("1. Gestión de Clientes");
-            System.out.println("2. Gestión de Libros");
+            System.out.println("\n=== Menu Principal ===");
+            System.out.println("1. Gestion de Clientes");
+            System.out.println("2. Gestion de Libros");
             System.out.println("0. Salir");
-            System.out.print("Seleccione una opción: ");
+            System.out.print("Seleccione una opcion: ");
 
             opcion = sc.nextInt();
             sc.nextLine();
@@ -37,7 +37,7 @@ public class Main {
                     break;
 
                 default:
-                    System.out.println("❌ Opción inválida.");
+                    System.out.println("❌ Opcion invalida.");
             }
 
         } while (opcion != 0);
@@ -50,13 +50,13 @@ public class Main {
         int opcion;
 
         do {
-            System.out.println("\n=== Gestión de Clientes ===");
+            System.out.println("\n=== Gestion de Clientes ===");
             System.out.println("1. Agregar Cliente");
             System.out.println("2. Listar Clientes");
             System.out.println("3. Actualizar Cliente");
             System.out.println("4. Eliminar Cliente");
             System.out.println("0. Volver");
-            System.out.print("Seleccione una opción: ");
+            System.out.print("Seleccione una opcion: ");
 
             opcion = sc.nextInt();
             sc.nextLine();
@@ -82,7 +82,7 @@ public class Main {
                     break;
 
                 default:
-                    System.out.println("❌ Opción inválida.");
+                    System.out.println("❌ Opcion invalida.");
             }
 
         } while (opcion != 0);
@@ -96,7 +96,7 @@ public class Main {
         System.out.print("Nombre: ");
         String nombre = sc.nextLine();
 
-        System.out.print("Teléfono: ");
+        System.out.print("Telefono: ");
         String telefono = sc.nextLine();
 
         System.out.print("Email: ");
@@ -106,7 +106,7 @@ public class Main {
 
         clientes.add(cliente);
 
-        System.out.println("✅ Cliente agregado correctamente.");
+        System.out.println("Cliente agregado correctamente.");
     }
 
     public static void listarClientes() {
@@ -120,7 +120,7 @@ public class Main {
                 System.out.println(
                         "Id: " + c.getId()
                         + ", Nombre: " + c.getNombre()
-                        + ", Teléfono: " + c.getTelefono()
+                        + ", Telefono: " + c.getTelefono()
                         + ", Email: " + c.getEmail()
                 );
             }
@@ -151,16 +151,16 @@ public class Main {
             System.out.print("Nuevo nombre: ");
             cliente.setNombre(sc.nextLine());
 
-            System.out.print("Nuevo teléfono: ");
+            System.out.print("Nuevo telefono: ");
             cliente.setTelefono(sc.nextLine());
 
             System.out.print("Nuevo email: ");
             cliente.setEmail(sc.nextLine());
 
-            System.out.println("✅ Cliente actualizado correctamente.");
+            System.out.println("Cliente actualizado correctamente.");
 
         } else {
-            System.out.println("❌ Cliente no encontrado.");
+            System.out.println("Cliente no encontrado.");
         }
     }
 
@@ -175,10 +175,10 @@ public class Main {
 
             clientes.remove(cliente);
 
-            System.out.println("✅ Cliente eliminado correctamente.");
+            System.out.println("Cliente eliminado correctamente.");
 
         } else {
-            System.out.println("❌ Cliente no encontrado.");
+            System.out.println("Cliente no encontrado.");
         }
     }
 
@@ -189,13 +189,13 @@ public class Main {
         int opcion;
 
         do {
-            System.out.println("\n=== Gestión de Libros ===");
+            System.out.println("\n=== Gestion de Libros ===");
             System.out.println("1. Crear Libro");
             System.out.println("2. Listar Libros");
             System.out.println("3. Actualizar Libro");
             System.out.println("4. Eliminar Libro");
             System.out.println("0. Volver");
-            System.out.print("Seleccione una opción: ");
+            System.out.print("Seleccione una opcion: ");
 
             opcion = sc.nextInt();
             sc.nextLine();
@@ -221,7 +221,7 @@ public class Main {
                     break;
 
                 default:
-                    System.out.println("❌ Opción inválida.");
+                    System.out.println("Opcion invalida.");
             }
 
         } while (opcion != 0);
@@ -229,19 +229,19 @@ public class Main {
 
     public static void crearLibro() {
 
-        System.out.print("Código: ");
+        System.out.print("Codigo: ");
         String codigo = sc.nextLine();
 
-        System.out.print("Título: ");
+        System.out.print("Titulo: ");
         String titulo = sc.nextLine();
 
-        System.out.print("Año de Publicación: ");
+        System.out.print("Anio de Publicacion: ");
         String publicacion = sc.nextLine();
 
         System.out.print("Autor: ");
         String autor = sc.nextLine();
 
-        System.out.print("¿Está disponible? (true/false): ");
+        System.out.print("¿Esta disponible? (true/false): ");
         boolean disponible = sc.nextBoolean();
         sc.nextLine();
 
@@ -255,7 +255,7 @@ public class Main {
 
         libros.add(libro);
 
-        System.out.println("✅ Libro agregado correctamente.");
+        System.out.println("Libro agregado correctamente.");
     }
 
     public static void listarLibros() {
@@ -269,9 +269,9 @@ public class Main {
             for (Libro l : libros) {
 
                 System.out.println(
-                        "Código: " + l.getCodigo()
+                        "Codigo: " + l.getCodigo()
                         + ", Título: " + l.getTitulo()
-                        + ", Año Publicación: " + l.getAnioPublicacion()
+                        + ", Anio Publicacion: " + l.getAnioPublicacion()
                         + ", Autor: " + l.getAutor()
                         + ", Disponible: " + l.isDisponible()
                 );
@@ -293,7 +293,7 @@ public class Main {
 
     public static void actualizarLibro() {
 
-        System.out.print("Ingrese el código del libro a actualizar: ");
+        System.out.print("Ingrese el codigo del libro a actualizar: ");
         String codigo = sc.nextLine();
 
         Libro libro = buscarLibro(codigo);
@@ -303,27 +303,27 @@ public class Main {
             System.out.print("Nuevo título: ");
             libro.setTitulo(sc.nextLine());
 
-            System.out.print("Nuevo Año de Publicación: ");
+            System.out.print("Nuevo Anio de Publicación: ");
             libro.setAnioPublicacion(sc.nextLine());
 
             System.out.print("Nuevo autor: ");
             libro.setAutor(sc.nextLine());
 
-            System.out.print("¿Está disponible? (true/false): ");
+            System.out.print("¿Esta disponible? (true/false): ");
             libro.setDisponible(sc.nextBoolean());
             sc.nextLine();
 
-            System.out.println("✅ Libro actualizado correctamente.");
+            System.out.println("Libro actualizado correctamente.");
 
         } else {
 
-            System.out.println("❌ Libro no encontrado.");
+            System.out.println("Libro no encontrado.");
         }
     }
 
     public static void eliminarLibro() {
 
-        System.out.print("Ingrese el código del libro a eliminar: ");
+        System.out.print("Ingrese el codigo del libro a eliminar: ");
         String codigo = sc.nextLine();
 
         Libro libro = buscarLibro(codigo);
@@ -332,11 +332,11 @@ public class Main {
 
             libros.remove(libro);
 
-            System.out.println("✅ Libro eliminado correctamente.");
+            System.out.println("Libro eliminado correctamente.");
 
         } else {
 
-            System.out.println("❌ Libro no encontrado.");
+            System.out.println("Libro no encontrado.");
         }
     }
 }
