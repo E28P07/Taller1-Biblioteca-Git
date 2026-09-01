@@ -1,21 +1,28 @@
-
 package com.mycompany.taller1.biblioteca.git;
 
 public class Libro extends Material {
-    private String editorial;
-    private int numeroPaginas;
+    private String autor;
+    private boolean disponible;
 
-    public Libro(String titulo, String autor, String codigo, String editorial, int numeroPaginas) {
-        super(titulo, autor, codigo);
-        this.editorial = editorial;
-        this.numeroPaginas = numeroPaginas;
+    public Libro(String codigo, String titulo, String anioPublicacion, String autor, boolean disponible) {
+        super(codigo, titulo, anioPublicacion);
+        this.autor = autor;
+        this.disponible = disponible;
     }
 
-    public String getEditorial() {
-        return editorial;
+    public String getAutor() {
+        return autor;
     }
 
-    public int getNumeroPaginas() {
-        return numeroPaginas;
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public boolean isDisponible() {
+        return disponible;
+    }
+
+    public void setDisponible(boolean disponible) {
+        this.disponible = disponible;
     }
 }
