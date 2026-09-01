@@ -1,17 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
 package com.mycompany.taller1.biblioteca.git;
 
-/**
- *
- * @author RCC Ing
- */
 public class Libro extends Material {
     private String autor;
-    private String disponible;
+    private boolean disponible;
 
-    public Libro(String codigo, String titulo, String anioPublicacion, String editorial) {
+    public Libro(String codigo, String titulo, String anioPublicacion, String autor, boolean disponible) {
         super(codigo, titulo, anioPublicacion);
         this.autor = autor;
         this.disponible = disponible;
@@ -25,11 +18,11 @@ public class Libro extends Material {
         this.autor = autor;
     }
 
-    public int getDisponible() {
+    public boolean isDisponible() {
         return disponible;
     }
 
-    public void setDisponible(String disponible) {
+    public void setDisponible(boolean disponible) {
         this.disponible = disponible;
     }
 }
